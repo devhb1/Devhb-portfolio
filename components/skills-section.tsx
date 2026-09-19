@@ -2,6 +2,10 @@ import { Badge } from "@/components/ui/badge"
 
 const skills = [
   "TypeScript",
+  "AI Systems",
+  "LLM Integrations",
+  "AI Agents",
+  "Prompt Engineering",
   "JavaScript",
   "Next.js",
   "React.js",

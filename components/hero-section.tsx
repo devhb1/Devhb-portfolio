@@ -19,16 +19,16 @@ export function HeroSection() {
       <div className="hero-grid" />
       <div className="relative max-w-7xl w-full mx-auto grid lg:grid-cols-[1.15fr_.85fr] gap-12 items-center">
         <div className="max-w-3xl">
-          <div className="eyebrow mb-7"><Sparkles className="h-4 w-4" /> Full-stack developer · Web3 builder</div>
+          <div className="eyebrow mb-7"><Sparkles className="h-4 w-4" /> Full-stack developer · Web3 · AI systems</div>
 
           {/* Heading */}
           <h1 className="text-5xl md:text-7xl font-black tracking-[-0.06em] leading-[.95]">
-            I build products for the <span className="text-gradient">onchain internet.</span>
+            I build intelligent products for the <span className="text-gradient">onchain internet.</span><span className="headline-cursor" aria-hidden="true">|</span>
           </h1>
 
           {/* Short tagline */}
           <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            I&apos;m Harshit Bainsla, a software developer who turns ambitious ideas into reliable full-stack systems, DeFi experiments, and useful blockchain products.
+            I&apos;m Harshit Bainsla, a software developer who turns ambitious ideas into reliable full-stack systems, AI-powered tools, DeFi experiments, and useful blockchain products.
           </p>
 
           {/* Actions */}
@@ -58,10 +58,11 @@ export function HeroSection() {
         <div className="hero-signal hidden lg:block">
           <div className="signal-orbit orbit-one" />
           <div className="signal-orbit orbit-two" />
-          <div className="signal-core"><span>HB</span><small>BUILD / SHIP / REPEAT</small></div>
+          <div className="signal-core"><span className="signal-monogram">HB</span><small>BUILD / SHIP / REPEAT</small></div>
           <div className="signal-label label-top">01 / FULL-STACK</div>
           <div className="signal-label label-right">02 / WEB3</div>
           <div className="signal-label label-bottom">03 / DEFI</div>
+          <div className="signal-label label-left">04 / AI</div>
         </div>
       </div>
       <button onClick={scrollToProjects} className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors" aria-label="Scroll to projects"><ArrowDown className="h-5 w-5" /></button>

@@ -33,7 +33,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-5 py-4">
         <div className="flex items-center justify-between">
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-3" aria-label="Back to top">
-            <span className="brand-mark">HB</span>
+            <span className="brand-mark" aria-hidden="true"><span>HB</span></span>
             <span className="hidden sm:block text-sm font-semibold tracking-tight">Harshit Bainsla</span>
           </button>
 
@@ -80,7 +80,14 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-border/60">
+          <nav className="mobile-menu md:hidden mt-4 pb-4 border-t border-border/60">
+            <div className="flex items-center gap-3 pt-4 pb-5">
+              <span className="brand-mark" aria-hidden="true"><span>HB</span></span>
+              <div>
+                <p className="text-sm font-semibold tracking-tight">Harshit Bainsla</p>
+                <p className="text-[10px] font-mono uppercase tracking-[.16em] text-muted-foreground">Full-stack · Web3 · AI</p>
+              </div>
+            </div>
             <div className="flex flex-col space-y-4 pt-4">
               <button
                 onClick={() => scrollToSection("about")}
