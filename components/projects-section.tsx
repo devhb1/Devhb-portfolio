@@ -12,8 +12,8 @@ const projects = [
       "Public security memory for AI agents and wallets. Investigate onchain threats once, name the verdict with ENS, and let every future agent resolve it for free.",
     tech: ["The Graph", "ENS", "Next.js", "TypeScript", "Web3"],
     image: "/projects/Saviours.png",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://www.saviours.xyz/",
+    githubUrl: "https://github.com/devhb1/Saviour",
     featured: true,
     featuredOrder: 1,
   },
@@ -85,8 +85,8 @@ const projects = [
       "A privacy-first reputation protocol that lets builders prove skills with zkPDF credentials, GitHub verification, and peer voting without revealing sensitive personal data.",
     tech: ["Zero Knowledge", "zkPDF", "GitHub Proofs", "Peer Voting", "Web3"],
     image: "/projects/HackerRep.png",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://hacker-rep.vercel.app/",
+    githubUrl: "https://github.com/devhb1/HackerRep",
     featured: true,
     featuredOrder: 2,
   },
@@ -122,7 +122,25 @@ export function ProjectsSection() {
                 <div className="hackathon-image"><Image src={project.image} alt={`${project.title} project preview`} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" sizes="(max-width: 1024px) 100vw, 50vw" /></div>
                 <CardHeader className="relative">
                   <span className="eyebrow text-[10px]">{project.eyebrow}</span>
-                  <CardTitle className="mt-3 text-2xl">{project.title}</CardTitle>
+                  <CardTitle className="mt-3 flex items-center justify-between text-2xl">
+                    <span>{project.title}</span>
+                    <div className="flex gap-1">
+                      {project.liveUrl !== "#" && (
+                        <Button size="icon" variant="ghost" asChild>
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} live site`}>
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+                      {project.githubUrl !== "#" && (
+                        <Button size="icon" variant="ghost" asChild>
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} GitHub repository`}>
+                            <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  </CardTitle>
                   <CardDescription className="leading-relaxed">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="relative"><div className="flex flex-wrap gap-2">{project.tech.map((tech) => <Badge key={tech} variant="secondary" className="rounded-full text-xs">{tech}</Badge>)}</div></CardContent>
