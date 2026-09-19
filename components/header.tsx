@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { Menu, X } from "lucide-react"
+import { ArrowUpRight, Menu, X } from "lucide-react"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -27,43 +27,46 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-background/85 backdrop-blur-xl border-b border-border/70" : "bg-transparent"
+        }`}
     >
-      <div className="max-w-6xl mx-auto px-4 py-4">
+      <div className="max-w-7xl mx-auto px-5 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl">
-            <span className="text-primary">HB</span>
-          </div>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-3" aria-label="Back to top">
+            <span className="brand-mark">HB</span>
+            <span className="hidden sm:block text-sm font-semibold tracking-tight">Harshit Bainsla</span>
+          </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center gap-7">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="nav-link"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="nav-link"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection("skills")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="nav-link"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="nav-link"
             >
               Contact
             </button>
             <ThemeToggle />
+            <Button size="sm" className="hidden lg:flex rounded-full px-4" onClick={() => scrollToSection("contact")}>
+              Let&apos;s talk <ArrowUpRight className="ml-1 h-4 w-4" />
+            </Button>
           </nav>
 
           {/* Mobile Navigation */}
@@ -77,29 +80,29 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t">
+          <nav className="md:hidden mt-4 pb-4 border-t border-border/60">
             <div className="flex flex-col space-y-4 pt-4">
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-left text-foreground hover:text-primary transition-colors"
+                className="nav-link text-left"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("projects")}
-                className="text-left text-foreground hover:text-primary transition-colors"
+                className="nav-link text-left"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection("skills")}
-                className="text-left text-foreground hover:text-primary transition-colors"
+                className="nav-link text-left"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-left text-foreground hover:text-primary transition-colors"
+                className="nav-link text-left"
               >
                 Contact
               </button>

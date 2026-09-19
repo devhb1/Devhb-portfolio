@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Harshit Bainsla - Full-Stack Developer",
-  description: "Full-Stack Developer | Web3 & DeFi Builder ",
+  title: "Harshit Bainsla | Full-Stack & Web3 Developer",
+  description: "Harshit Bainsla builds full-stack products, DeFi experiments, and onchain tools. Creator of Saviours at ETHGlobal Online 2026.",
 }
 
 export default function RootLayout({
