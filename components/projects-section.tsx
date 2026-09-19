@@ -20,7 +20,7 @@ const projects = [
 
   {
     title: "1nsync",
-    eyebrow: "ETHGlobal Mumbai 2025 · 1nsync",
+    eyebrow: "ETHGlobal Unity DeFi · 1nsync",
     description:
       "Gas-optimized batch swapper built with 1inch APIs, modular DeFi trading hub with MEV protection, perform multiple individual swaps in one atomic tx",
     tech: ["Next.js", "1inch API", "DeFi", "MEV Protection", "TypeScript"],
@@ -80,7 +80,7 @@ const projects = [
   },
   {
     title: "HackerRep",
-    eyebrow: "ETHGlobal New Delhi 2026 · Featured",
+    eyebrow: "ETHGlobal New Delhi 2025 · Featured",
     description:
       "A privacy-first reputation protocol that lets builders prove skills with zkPDF credentials, GitHub verification, and peer voting without revealing sensitive personal data.",
     tech: ["Zero Knowledge", "zkPDF", "GitHub Proofs", "Peer Voting", "Web3"],

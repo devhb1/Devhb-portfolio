@@ -3,8 +3,8 @@ import { Award, GraduationCap } from "lucide-react"
 
 const hackathons = [
   ["ETHGlobal Online 2026", "Saviours - Security memory for AI agents"],
-  ["ETHGlobal New Delhi 2026", "HackerRep - Zero-knowledge reputation"],
-  ["ETHGlobal Mumbai 2025", "1nsync - Gas-optimized batch swapper"],
+  ["ETHGlobal New Delhi 2025", "HackerRep - Zero-knowledge reputation"],
+  ["ETHGlobal Unity DeFi", "1nsync - Gas-optimized batch swapper"],
   ["Chromion: Chainlink Hackathon", "YieldAgentX - Autonomous AI DeFi agents"],
 ]
 
